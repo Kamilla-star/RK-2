@@ -1,0 +1,96 @@
+$bg-color: #f1faee;
+$text-color: #1d3557;
+$block-bg-color: #a8dadc;
+$block-text-color: #1d3557;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body,
+html {
+    background-color: $bg-color;
+    color: $text-color;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+a {
+    color: $text-color;
+}
+.change-color {
+    background-color: $block-text-color;
+    color: $bg-color;
+    padding: 1rem 0.6rem;
+    border-radius: 0.5rem;
+}
+.main {
+    &__inner {
+        padding-top: 5rem;
+    }
+    &__title {
+        font-size: 2.5rem;
+    }
+    section:first-of-type {
+        margin-top: 3rem;
+    }
+    section:not(:first-of-type) {
+        margin-top: 2rem;
+    }
+    section {
+        text-align: start;
+        h2 {
+            font-size: 2rem;
+        }
+    }
+    .technologies {
+        border: 1px solid $text-color;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+    .libraries {
+        border: 1px solid $text-color;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+    .frameworks {
+        border: 1px solid $text-color;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+    .blocks {
+        // display: flex;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3rem;
+
+        margin-top: 1.5rem;
+    }
+    .block {
+        background-color: $block-bg-color;
+        padding: 1rem;
+        border-radius: 1rem;
+        text-align: center;
+
+        &__title {
+            font-size: 1.5rem;
+        }
+        &__description {
+            font-size: 1.2rem;
+            padding-top: 1rem;
+        }
+        transition: 300ms linear;
+    }
+    .block:hover {
+        background-color: $block-text-color;
+        color: $bg-color;
+        transition: 300ms linear;
+    }
+}
+
+.footer {
+    padding: 4rem 0;
+    &__title {
+        font-size: 2rem;
+    }
+}
